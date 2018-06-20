@@ -1,0 +1,27 @@
+<div class="row compare">
+  <div class="col-12 mt-5 text-center">
+    <table class="table">
+      <thead class="thead-default">
+        <tr>
+          <th>{{product.name}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="price">
+          <th scope="row">Price</th>
+          <td class="text-center">{{product.price}}</td>
+        </tr>
+        <tr class="colors">
+          <th scope="row">Colors</th>
+          <span class="'bg-' + color"></span>
+        </tr>
+        <tr class="condition">
+          <th scope="row">Condition</th>
+          <td class="product.condition === 'Used' ? 'bg-red' : 'bg-green'">
+            {{product.condition}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
