@@ -5,7 +5,6 @@ import { RouterModule, Routes } from '@angular/router'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ProductCompareComponent } from './product-compare/product-compare.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -17,8 +16,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent,
-    ProductCompareComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

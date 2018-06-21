@@ -13,36 +13,47 @@ export class HomeComponent implements OnInit {
   }
   products = [
     {
-      "price": "$39",
+      "id": "1",
       "name": "Chair",
-      "description": "Black chair",
       "image": "https://devitems.com/preview/furnish/img/product/1.jpg",
-      "condition": "Used"
+      "price": "$39",
+      "colors": ["red", "green", "blue"],
+      "condition": "New",
+      "description": "Black chair"
     },
     {
-      "price": "$319",
+      "id": "2",
       "name": "Lamp",
-      "description": "Amazing lamp",
       "image": "https://devitems.com/preview/furnish/img/product/2.jpg",
-      "condition": "New"
+      "price": "$319",
+      "colors": ["green", "blue"],
+      "condition": "Used",
+      "description": "Amazing lamp"
     },
     {
-      "price": "$239",
+      "id": "3",
       "name": "Statue",
-      "description": "Used statue",
       "image": "https://devitems.com/preview/furnish/img/product/3.jpg",
-      "condition": "New"
+      "price": "$239",
+      "colors": ["red"],
+      "condition": "Used",
+      "description": "Used Statue"
     },
     {
-      "price": "$199",
+      "id": "4",
       "name": "Seat",
-      "description": "Large seat",
       "image": "https://devitems.com/preview/furnish/img/product/4.jpg",
-      "condition": "Used"
+      "price": "$239",
+      "colors": ["blue"],
+      "condition": "New",
+      "description": "Large Seat"
     }
   ]
+  productsToCompare : any = [];
 
-  addToCompare() {
-    window.location.href = "https://bmo.com"
+  addToCompare(product) {
+    console.log(product);
+    this.productsToCompare.push(product);
+    console.log(this.productsToCompare);
   }
 }
