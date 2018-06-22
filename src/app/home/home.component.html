@@ -18,25 +18,27 @@
     </div>
     <div class="row compare" *ngIf="enoughProductsToCompare">
       <div class="col-12 mt-5 text-center">
-        <table class="table" *ngFor="let product of productsToCompare">
+        <table class="table">
           <thead class="thead-default">
             <tr>
               <th></th>
-              <th>{{product.name}}</th>
+              <th *ngFor="let product of productsToCompare">{{product.name}}</th>
             </tr>
           </thead>
           <tbody>
             <tr class="price">
               <th scope="row">Price</th>
-              <td class="text-center">{{product.price}}</td>
+              <td class="text-center" *ngFor="let product of productsToCompare">{{product.price}}</td>
             </tr>
             <tr class="colors">
               <th scope="row">Colors</th>
-              <span *ngFor="let color of product.colors" [class]="'bg-' + color"></span>
+              <td *ngFor="let product of productsToCompare">
+                <span *ngFor="let color of product.colors" [class]="'bg-' + color"></span>
+              </td>
             </tr>
             <tr class="condition">
               <th scope="row">Condition</th>
-              <td [class]="product.condition === 'Used' ? 'bg-red' : 'bg-green'">
+              <td [class]="product.condition === 'Used' ? 'bg-red' : 'bg-green'" *ngFor="let product of productsToCompare">
                 {{product.condition}}
               </td>
             </tr>
