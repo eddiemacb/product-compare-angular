@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JsonPipe } from '@angular/common';
+import { ProductService } from '../shared/product.service'
 
 @Component({
   selector: 'app-home',
@@ -8,52 +8,13 @@ import { JsonPipe } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
+
+  products: any = [];
 
   ngOnInit() {
+    this.products = this.productService.getProducts();
   }
-  products = [
-    {
-      "id": "1",
-      "name": "Chair",
-      "image": "https://devitems.com/preview/furnish/img/product/1.jpg",
-      "price": "$39",
-      "colors": ["red", "green", "blue"],
-      "condition": "New",
-      "description": "Black chair",
-      "compareOrRemove": "Compare"
-    },
-    {
-      "id": "2",
-      "name": "Lamp",
-      "image": "https://devitems.com/preview/furnish/img/product/2.jpg",
-      "price": "$319",
-      "colors": ["green", "blue"],
-      "condition": "Used",
-      "description": "Amazing lamp",
-      "compareOrRemove": "Compare"
-    },
-    {
-      "id": "3",
-      "name": "Statue",
-      "image": "https://devitems.com/preview/furnish/img/product/3.jpg",
-      "price": "$239",
-      "colors": ["red"],
-      "condition": "Used",
-      "description": "Used Statue",
-      "compareOrRemove": "Compare"
-    },
-    {
-      "id": "4",
-      "name": "Seat",
-      "image": "https://devitems.com/preview/furnish/img/product/4.jpg",
-      "price": "$239",
-      "colors": ["blue"],
-      "condition": "New",
-      "description": "Large Seat",
-      "compareOrRemove": "Compare"
-    }
-  ]
 
   productsToCompare: any = [];
   compareOrRemove: string = "Compare";
@@ -61,7 +22,6 @@ export class HomeComponent implements OnInit {
 
   compare(inputProduct) {
     inputProduct.compareOrRemove = inputProduct.compareOrRemove === "Compare" ? "Remove" : "Compare";
-    console.log(inputProduct.compareOrRemove);
     if (this.checkProduct(inputProduct, this.productsToCompare)) {
       this.productsToCompare = this.removeProduct(this.productsToCompare, inputProduct);
       if (this.productsToCompare.length < 2) {
