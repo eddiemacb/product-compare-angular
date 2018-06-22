@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
       "colors": ["red", "green", "blue"],
       "condition": "New",
       "description": "Black chair",
-      "compareOrRemove" : "Compare"
+      "compareOrRemove": "Compare"
     },
     {
       "id": "2",
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
       "colors": ["green", "blue"],
       "condition": "Used",
       "description": "Amazing lamp",
-      "compareOrRemove" : "Compare"
+      "compareOrRemove": "Compare"
     },
     {
       "id": "3",
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
       "colors": ["red"],
       "condition": "Used",
       "description": "Used Statue",
-      "compareOrRemove" : "Compare"
+      "compareOrRemove": "Compare"
     },
     {
       "id": "4",
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
       "colors": ["blue"],
       "condition": "New",
       "description": "Large Seat",
-      "compareOrRemove" : "Compare"
+      "compareOrRemove": "Compare"
     }
   ]
 
