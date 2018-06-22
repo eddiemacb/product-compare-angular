@@ -2,10 +2,11 @@
   <div class="mt-5">
       <div class="row mt-3">
         <div *ngFor="let product of products" class="col-sm-6 col-md-3">
-          <div class="product">
+          <div [class]="productClicked ? 'product compare' : 'product'">
             <img [src]="product.image" alt="{{product.name}}" />
             <div className="image_overlay"></div>
-            <div class="view_details" (click)="addToCompare(product)">Compare</div>
+            <div class="view_details" 
+              (click)="compare(product)">{{product.compareOrRemove}}</div>
             <div class="stats">
               <div class="stats-container">
                 <span class="product_price">{{product.price}}</span>
@@ -16,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="row compare">
+      <div class="row compare" *ngIf="enoughProductsToCompare">
         <div class="col-12 mt-5 text-center">
           <table class="table" *ngFor="let product of productsToCompare">
             <thead class="thead-default">
