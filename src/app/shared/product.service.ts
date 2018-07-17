@@ -16,7 +16,7 @@ const PRODUCTS = [
   {
     "id": "1",
     "name": "Chair",
-    "image": "https://devitems.com/preview/furnish/img/product/1.jpg",
+    "image": "http://localhost:4200/assets/img/chair.jpeg",
     "price": "$39",
     "colors": ["red", "green", "blue"],
     "condition": "New",
@@ -26,7 +26,7 @@ const PRODUCTS = [
   {
     "id": "2",
     "name": "Lamp",
-    "image": "https://devitems.com/preview/furnish/img/product/2.jpg",
+    "image": "http://localhost:4200/assets/img/lamp.jpeg",
     "price": "$319",
     "colors": ["green", "blue"],
     "condition": "Used",
@@ -36,7 +36,7 @@ const PRODUCTS = [
   {
     "id": "3",
     "name": "Statue",
-    "image": "https://devitems.com/preview/furnish/img/product/3.jpg",
+    "image": "http://localhost:4200/assets/img/statue.jpeg",
     "price": "$239",
     "colors": ["red"],
     "condition": "Used",
@@ -46,7 +46,7 @@ const PRODUCTS = [
   {
     "id": "4",
     "name": "Seat",
-    "image": "https://devitems.com/preview/furnish/img/product/4.jpg",
+    "image": "http://localhost:4200/assets/img/seat.jpeg",
     "price": "$239",
     "colors": ["blue"],
     "condition": "New",
